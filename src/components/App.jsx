@@ -1,10 +1,9 @@
 import React from 'react';
 import Header from './Header';
-import {  Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import About from './About';
 import Splash from './Splash';
-import Sidebar from './Sidebar';
-import Documentation from './Documentation'
+import Documentation from './docs/Documentation';
 
 function App(){
   const styles = {
@@ -21,9 +20,16 @@ function App(){
         <Switch>
           <Route exact path='/' component={Splash} />
           <Route path='/about' component={About} />
-          <Route path='/documentation/install' component={Documentation} />
+          <Route path='/documentation' component={Documentation} />
         </Switch>
       </div>
+      <style jsx>{`
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+      `}</style>
     </div>
   );
 }

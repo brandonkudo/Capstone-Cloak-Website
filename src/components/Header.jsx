@@ -10,7 +10,7 @@ function Header(){
       flexDirection: 'row',
       justifyContent: 'center',
       width: '100vw',
-      height: '30px',
+      height: '40px',
       alignItems: 'center'
     },
     containerStyle: {
@@ -23,17 +23,19 @@ function Header(){
       fontFamily: 'futura',
       color: 'white',
       textDecoration: 'underline',
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      letterSpacing: '5px'
     },
     linkStyle: {
       fontFamily: 'futura',
       color: 'white',
-      textDecoration: 'none'
+      textDecoration: 'none',
+      textTransform: 'uppercase'
     },
     linkWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      width: '300px',
+      width: '350px',
       justifyContent: 'space-between'
     }
   }
@@ -50,7 +52,13 @@ function Header(){
         </div>
 
       </div>
-
+      <style jsx>{`
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+      `}</style>
     </div>
   );
 }
