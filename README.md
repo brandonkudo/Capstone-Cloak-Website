@@ -1,1 +1,1 @@
-![component-structure](assets/images/ComponentStructure.png)
+![component-structure](src/assets/images/ComponentStructure.png)
