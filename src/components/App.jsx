@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import About from './About';
 import Splash from './Splash';
 import Documentation from './docs/Documentation';
+import Error404 from './Error404';
 
 function App(){
   const styles = {
@@ -21,6 +22,7 @@ function App(){
           <Route exact path='/' component={Splash} />
           <Route path='/about' component={About} />
           <Route path='/documentation' component={Documentation} />
+          <Route component={Error404} />
         </Switch>
       </div>
       <style jsx>{`

@@ -30,12 +30,13 @@ function Header(){
       fontFamily: 'futura',
       color: 'white',
       textDecoration: 'none',
-      textTransform: 'uppercase'
+      textTransform: 'uppercase',
+      fontSize: '12px',
     },
     linkWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      width: '350px',
+      width: '300px',
       justifyContent: 'space-between'
     }
   }
