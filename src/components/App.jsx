@@ -3,7 +3,7 @@ import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
 import About from './About';
 import Splash from './Splash';
-import Documentation from './docs/Documentation';
+import Documentation from './Documentation';
 import Error404 from './Error404';
 
 function App(){
@@ -25,11 +25,13 @@ function App(){
           <Route component={Error404} />
         </Switch>
       </div>
-      <style jsx>{`
+      <style jsx global>{`
         * {
           box-sizing: border-box;
           margin: 0;
           padding: 0;
+          font-family: futura;
+          font-weight: 100;
         }
       `}</style>
     </div>
