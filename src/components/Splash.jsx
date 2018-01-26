@@ -19,7 +19,7 @@ function Splash(){
       letterSpacing: '20px',
       color: '#3C3B3B'
     }
-  }
+  };
   return (
     <div style={styles.containerStyle}>
       <h1 style={styles.textStyle}>Cloak</h1>

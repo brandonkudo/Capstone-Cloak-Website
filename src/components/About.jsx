@@ -22,7 +22,7 @@ function About(){
     bodyStyle: {
       fontSize: '16px'
     }
-  }
+  };
   return (
     <div style={styles.wrapperStyle}>
       <div style={styles.containerStyle}>

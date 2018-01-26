@@ -13,7 +13,7 @@ function App(){
       flexDirection: 'row',
       width: '100vw'
     }
-  }
+  };
   return(
     <div>
       <Header/>

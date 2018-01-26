@@ -1,7 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Item from './Item';
-import { Switch, Route } from 'react-router-dom';
 
 const styles = {
   wrapperStyle: {
@@ -9,27 +8,44 @@ const styles = {
     display: 'flex',
     flexDirection: 'row'
   }
-}
+};
 
 class Documentation extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title: 'title'
-    }
+      title: 'install',
+      example: 'example',
+      body: 'body',
+      codeSnippet: 'codeSnippet'
+    };
+    this.handleSwitchToButtonPage = this.handleSwitchToButtonPage.bind(this);
   }
 
-  handleSwitchPage(){
-    console.log('hello');
+  handleSwitchToButtonPage(){
+    let newState = this.state;
+    newState.title = 'button';
+    newState.example = <button>Button</button>;
+    newState.body = 'button';
+    newState.codeSnippet = 'button';
+    this.setState({
+      title: newState.title,
+      example: newState.example,
+      body: newState.body,
+      codeSnippet: newState.codeSnippet
+    });
   }
 
 
   render(){
     return(
       <div style={styles.wrapperStyle}>
-        <Sidebar onSwitchPage={this.handleSwitchPage}/>
+        <Sidebar onSwitchToButtonPage={this.handleSwitchToButtonPage}/>
         <Item
-          title={this.state.title}/>
+          title={this.state.title}
+          example={this.state.example}
+          body={this.state.body}
+          codeSnippet={this.state.codeSnippet}/>
       </div>
     );
   }

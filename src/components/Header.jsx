@@ -39,7 +39,7 @@ function Header(){
       width: '300px',
       justifyContent: 'space-between'
     }
-  }
+  };
   return (
     <div style={styles.wrapperStyle}>
 
