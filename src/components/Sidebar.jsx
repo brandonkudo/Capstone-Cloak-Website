@@ -15,11 +15,14 @@ function Sidebar(props){
     },
     linkStyle: {
       textDecoration: 'none'
+    },
+    installStyle: {
+      marginTop: '30px'
     }
   };
   return(
     <div style={styles.containerStyle}>
-      <p>Install</p>
+      <p style={styles.installStyle}>Install</p>
       <p>Animations</p>
       <p onClick={props.onSwitchToButtonPage}>Buttons</p>
       <p onClick={props.onSwitchToCardPage}>Cards</p>

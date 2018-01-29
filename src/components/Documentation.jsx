@@ -4,6 +4,7 @@ import Item from './Item';
 import Button from './docs/Button';
 import Button2 from './docs/Button2';
 import Card from './docs/Card';
+import Card2 from './docs/Card2';
 import Forms from './docs/Forms';
 
 const styles = {
@@ -56,10 +57,20 @@ class Documentation extends React.Component {
 
   handleSwitchToCardPage(){
     let newState = this.state;
-    newState.title = 'card';
+    newState.title = 'card with image';
     newState.example = <Card />;
-    newState.body = `This is a card. Use the class ".card" in a parent div, and the classes ".card-head" and ".card-body" as it's child elements.`;
-    newState.codeSnippet = `<div class="card">
+    newState.body = `This is a card. Use the class ".card-img" in a parent div, and the classes ".card-img-head" and ".card-img-body" as it's child elements.`;
+    newState.codeSnippet = `<div class="card-img">
+                              <div class="card-img-head">
+                              </div>
+                              <div class="card-img-body">
+                                <p>Card</p>
+                                </div>
+                              </div>`;
+    newState.title2 = 'card without image';
+    newState.example2 = <Card2 />;
+    newState.body2 = `This is a card. Use the class ".card" in a parent div, and the classes ".card-head" and ".card-body" as it's child elements.`;
+    newState.codeSnippet2 = `<div class="card">
                               <div class="card-head">
                               </div>
                               <div class="card-body">
@@ -70,7 +81,11 @@ class Documentation extends React.Component {
       title: newState.title,
       example: newState.example,
       body: newState.body,
-      codeSnippet: newState.codeSnippet
+      codeSnippet: newState.codeSnippet,
+      title2: newState.title2,
+      example2: newState.example2,
+      body2: newState.body2,
+      codeSnippet2: newState.codeSnippet2
     });
   }
 

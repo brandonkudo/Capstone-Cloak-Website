@@ -47,12 +47,18 @@ function Header(){
         <Link to='/' style={styles.logoStyle}>Cloak</Link>
 
         <div style={styles.linkWrapper}>
-          <Link to='/' style={styles.linkStyle}>Home</Link>
+          <Link to='/' style={styles.linkStyle} className="header-link"><p>Home</p></Link>
           <Link to='/about' style={styles.linkStyle}>About</Link>
           <Link to='/documentation/install' style={styles.linkStyle}>Documentation</Link>
         </div>
 
       </div>
+
+      <style jsx>{`
+          p:hover {
+            background-color: white;
+          }
+      `}</style>
 
     </div>
   );

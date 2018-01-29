@@ -18,7 +18,7 @@ function Item(props){
     snippetStyle: {
       backgroundColor: '#D8D8D8',
       padding: '10px',
-      marginBottom: '30px',
+      marginBottom: '60px',
       border: '1px solid grey'
     },
     snippetTextStyle: {
