@@ -29,7 +29,7 @@ function Sidebar(props){
       <p>Colors</p>
       <p>Fonts</p>
       <p onClick={props.onSwitchToFormsPage}>Forms</p>
-      <p>Grid</p>
+      <p onClick={props.onSwitchToGridPage}>Grid</p>
       <p>Icons</p>
       <p>Mixins</p>
       <p>Navbar</p>

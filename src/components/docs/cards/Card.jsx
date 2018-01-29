@@ -5,7 +5,7 @@ function Card(){
     cardStyle: {
       height: '200px',
       width: '150px',
-      boxShadow: '1px 1px 1px black',
+      boxShadow: '1px 1px 1px #828282',
       borderRadius: '3px'
     },
     cardHead: {
