@@ -53,13 +53,7 @@ function Header(){
         </div>
 
       </div>
-      <style jsx>{`
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-      `}</style>
+
     </div>
   );
 }

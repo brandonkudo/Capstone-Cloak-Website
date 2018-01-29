@@ -7,18 +7,19 @@ function Item(props){
     },
     titleStyle: {
       textTransform: 'uppercase',
-      marginBottom: '10px'
+      marginBottom: '30px'
     },
     exampleStyle: {
-      marginBottom: '10px'
+      marginBottom: '30px'
     },
     bodyStyle: {
-      marginBottom: '10px'
+      marginBottom: '30px'
     },
     snippetStyle: {
       backgroundColor: '#D8D8D8',
-      padding: '5px',
-      marginBottom: '10px'
+      padding: '10px',
+      marginBottom: '30px',
+      border: '1px solid grey'
     },
     snippetTextStyle: {
       fontFamily: 'courier',
@@ -28,12 +29,14 @@ function Item(props){
   }
   return(
     <div style={styles.wrapperStyle}>
+
       <h1 style={styles.titleStyle}>{props.title}</h1>
       <div style={styles.exampleStyle}>{props.example}</div>
       <p style={styles.bodyStyle}>{props.body}</p>
       <div style={styles.snippetStyle}>
         <p style={styles.snippetTextStyle}>{props.codeSnippet}</p>
       </div>
+      
     </div>
   );
 }

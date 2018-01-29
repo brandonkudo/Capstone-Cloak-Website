@@ -5,7 +5,7 @@ function Sidebar(props){
   const styles = {
     containerStyle: {
       backgroundColor: '#EAE8E8',
-      width: '200px',
+      width: '250px',
       display: 'flex',
       flexDirection: 'column'
     },
@@ -22,7 +22,7 @@ function Sidebar(props){
       <p>Install</p>
       <p>Animations</p>
       <p onClick={props.onSwitchToButtonPage}>Buttons</p>
-      <p>Cards</p>
+      <p onClick={props.onSwitchToCardPage}>Cards</p>
       <p>Colors</p>
       <p>Fonts</p>
       <p>Forms</p>
