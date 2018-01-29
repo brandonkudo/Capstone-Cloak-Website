@@ -49,7 +49,7 @@ function Grid(){
     col1B: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
+      background: '#9B9B9B',
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
@@ -61,8 +61,8 @@ function Grid(){
     col1C: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
-      color: 'white',
+      background: '#D8D8D8',
+      color: '#3C3B3B',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -73,7 +73,7 @@ function Grid(){
     col1D: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
+      background: '#3C3B3B',
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
