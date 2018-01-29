@@ -5,9 +5,11 @@ function Sidebar(props){
   const styles = {
     containerStyle: {
       backgroundColor: '#EAE8E8',
-      width: '250px',
+      width: '225px',
+      height: '575px',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      overflow: 'scroll'
     },
     listStyle: {
       display: 'flex',

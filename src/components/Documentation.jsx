@@ -10,7 +10,8 @@ import CardCode from './docs/cards/CardCode'
 import Card2 from './docs/cards/Card2';
 import Card2Code from './docs/cards/Card2Code';
 import Forms from './docs/Forms';
-import Grid from './docs/Grid';
+import Grid from './docs/grids/Grid';
+import GridCode from './docs/grids/GridCode';
 
 const styles = {
   wrapperStyle: {
@@ -117,13 +118,7 @@ class Documentation extends React.Component {
     newState.title = 'grid';
     newState.example = <Grid />;
     newState.body = `Cloak uses a 12 column grid system based on flexbox.  It is fully responsive and easy to implement. To use place all items you want into a parent element using the class “.row”.  You can then nest as many as 12 columns within each row; use the class “.col-“ then denote how much of the 12 column width you wish for that column to use.  All columns in a row must add up to 12.`;
-    newState.codeSnippet = `<div class="card-img">
-                              <div class="card-img-head">
-                              </div>
-                              <div class="card-img-body">
-                                <p>Card</p>
-                                </div>
-                              </div>`;
+    newState.codeSnippet = <GridCode />;
     newState.title2 = '';
     newState.example2 = '';
     newState.body2 = '';

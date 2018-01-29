@@ -3,7 +3,10 @@ import React from 'react';
 function Item(props){
   const styles = {
     wrapperStyle: {
-      padding: '25px'
+      padding: '25px',
+      width: '800px',
+      height: '575px',
+      overflow: 'scroll'
     },
     titleStyle: {
       textTransform: 'uppercase',

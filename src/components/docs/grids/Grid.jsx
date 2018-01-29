@@ -97,7 +97,7 @@ function Grid(){
     col1F: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
+      background: '#9B9B9B',
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
@@ -109,8 +109,8 @@ function Grid(){
     col1G: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
-      color: 'white',
+      background: '#D8D8D8',
+      color: '#3C3B3B',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -121,7 +121,7 @@ function Grid(){
     col1H: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
+      background: '#3C3B3B',
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
@@ -145,7 +145,7 @@ function Grid(){
     col1J: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
+      background: '#9B9B9B',
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
@@ -157,8 +157,8 @@ function Grid(){
     col1K: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
-      color: 'white',
+      background: '#D8D8D8',
+      color: '#3C3B3B',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -169,7 +169,7 @@ function Grid(){
     col1L: {
       width: '40px',
       height: '50px',
-      background: '#B2736F',
+      background: '#3C3B3B',
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
