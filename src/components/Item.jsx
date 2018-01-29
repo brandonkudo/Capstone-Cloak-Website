@@ -36,7 +36,14 @@ function Item(props){
       <div style={styles.snippetStyle}>
         <p style={styles.snippetTextStyle}>{props.codeSnippet}</p>
       </div>
-      
+
+      <h1 style={styles.titleStyle}>{props.title2}</h1>
+      <div style={styles.exampleStyle}>{props.example2}</div>
+      <p style={styles.bodyStyle}>{props.body2}</p>
+      <div style={styles.snippetStyle}>
+        <p style={styles.snippetTextStyle}>{props.codeSnippet2}</p>
+      </div>
+
     </div>
   );
 }

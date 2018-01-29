@@ -25,7 +25,7 @@ function Sidebar(props){
       <p onClick={props.onSwitchToCardPage}>Cards</p>
       <p>Colors</p>
       <p>Fonts</p>
-      <p>Forms</p>
+      <p onClick={props.onSwitchToFormsPage}>Forms</p>
       <p>Grid</p>
       <p>Icons</p>
       <p>Mixins</p>

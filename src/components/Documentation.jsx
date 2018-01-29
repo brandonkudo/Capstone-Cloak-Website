@@ -2,7 +2,9 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import Item from './Item';
 import Button from './docs/Button';
+import Button2 from './docs/Button2';
 import Card from './docs/Card';
+import Forms from './docs/Forms';
 
 const styles = {
   wrapperStyle: {
@@ -16,26 +18,39 @@ class Documentation extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title: 'install',
-      example: 'example',
-      body: 'body',
-      codeSnippet: 'codeSnippet'
+      title: '',
+      example: '',
+      body: '',
+      codeSnippet: '',
+      title2: '',
+      example2: '',
+      body2: '',
+      codeSnippet2: ''
     };
     this.handleSwitchToButtonPage = this.handleSwitchToButtonPage.bind(this);
     this.handleSwitchToCardPage = this.handleSwitchToCardPage.bind(this);
+    this.handleSwitchToFormsPage = this.handleSwitchToFormsPage.bind(this);
   }
 
   handleSwitchToButtonPage(){
     let newState = this.state;
     newState.title = 'button';
     newState.example = <Button />;
-    newState.body = `This how the default button is styled. Simply use by implementing the button HTML tag.`;
+    newState.body = `This is how the default button is styled. Simply use by implementing the button HTML tag.`;
     newState.codeSnippet = `<button>Button</button>`;
+    newState.title2 = 'gradient button';
+    newState.example2 = <Button2 />;
+    newState.body2 = `This is the gradient button. Use by implementing the class ".btn-gradient".`;
+    newState.codeSnippet2 = `<button class="btn-gradient">Button</button>`;
     this.setState({
       title: newState.title,
       example: newState.example,
       body: newState.body,
-      codeSnippet: newState.codeSnippet
+      codeSnippet: newState.codeSnippet,
+      title2: newState.title2,
+      example2: newState.example2,
+      body2: newState.body2,
+      codeSnippet2: newState.codeSnippet2
     });
   }
 
@@ -59,18 +74,41 @@ class Documentation extends React.Component {
     });
   }
 
+  handleSwitchToFormsPage(){
+    let newState = this.state;
+    newState.title = 'form';
+    newState.example = <Forms />;
+    newState.body = `We have a number of different components to customize your forms. These are the default styles for the <input>, <textarea>, <input type="radio">, and <input type="checkbox"> HTML tags.`;
+    newState.codeSnippet = `<input>
+                            <textarea>
+                            <input type="radio">
+                            <input type="checkbox">
+                            `;
+    this.setState({
+      title: newState.title,
+      example: newState.example,
+      body: newState.body,
+      codeSnippet: newState.codeSnippet
+    });
+  }
+
 
   render(){
     return(
       <div style={styles.wrapperStyle}>
         <Sidebar
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
-          onSwitchToCardPage={this.handleSwitchToCardPage}/>
+          onSwitchToCardPage={this.handleSwitchToCardPage}
+          onSwitchToFormsPage={this.handleSwitchToFormsPage}/>
         <Item
           title={this.state.title}
           example={this.state.example}
           body={this.state.body}
-          codeSnippet={this.state.codeSnippet}/>
+          codeSnippet={this.state.codeSnippet}
+          title2={this.state.title2}
+          example2={this.state.example2}
+          body2={this.state.body2}
+          codeSnippet2={this.state.codeSnippet2}/>
       </div>
     );
   }
