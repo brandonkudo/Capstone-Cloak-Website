@@ -14,6 +14,7 @@ import Grid from './docs/grids/Grid';
 import GridCode from './docs/grids/GridCode';
 import Navbar from './docs/navs/Navbar';
 import NavbarCode from './docs/navs/NavbarCode';
+import Navbar2 from './docs/navs/Navbar2';
 
 const styles = {
   wrapperStyle: {
@@ -144,9 +145,9 @@ class Documentation extends React.Component {
     newState.example = <Navbar />;
     newState.body = `Fully responsive navbars, use the class ".nav" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"`;
     newState.codeSnippet = <NavbarCode />;
-    newState.title2 = '';
-    newState.example2 = '';
-    newState.body2 = '';
+    newState.title2 = 'gradient navbar';
+    newState.example2 = <Navbar2 />;
+    newState.body2 = `Navbar with a linear gradient, use the class ".nav-gradient" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"`;
     newState.codeSnippet2 = '';
     this.setState({
       title: newState.title,

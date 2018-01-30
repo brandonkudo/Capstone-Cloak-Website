@@ -4,12 +4,13 @@ function Navbar(){
   const styles = {
     wrapperStyle: {
       width: '100%',
-      background: '#3C3B3B',
+      background: 'linear-gradient(to bottom, #6E6E6E, #3C3B3B)',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
       height: '40px',
-      alignItems: 'center'
+      alignItems: 'center',
+      borderRadius: '3px'
     },
     containerStyle: {
       display: 'flex',
