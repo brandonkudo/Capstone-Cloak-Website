@@ -3,7 +3,7 @@ import React from 'react';
 function SidebarItem(){
   const styles = {
     containerStyle: {
-      width: '100px',
+      width: '125px',
       backgroundColor: '#EAE8E8',
       display: 'flex',
       flexDirection: 'column',
@@ -27,6 +27,7 @@ function SidebarItem(){
           text-decoration: none;
           color: #3C3B3B;
           text-align: center;
+          text-transform: uppercase;
         }
 
         a:hover {

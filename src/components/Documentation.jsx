@@ -168,7 +168,7 @@ class Documentation extends React.Component {
     let newState = this.state;
     newState.title = 'sidebar';
     newState.example = <SidebarItem />;
-    newState.body = '';
+    newState.body = 'A sidebar with clickable links and hover styling.  Can be oriented left or right.  Use the class ".sidebar-left" to place on left, or ".sidebar-right" to place on the right.';
     newState.codeSnippet = '';
     newState.title2 = '';
     newState.example2 = '';
