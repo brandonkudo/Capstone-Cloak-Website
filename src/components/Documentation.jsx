@@ -12,6 +12,8 @@ import Card2Code from './docs/cards/Card2Code';
 import Forms from './docs/Forms';
 import Grid from './docs/grids/Grid';
 import GridCode from './docs/grids/GridCode';
+import Navbar from './docs/navs/Navbar';
+import NavbarCode from './docs/navs/NavbarCode';
 
 const styles = {
   wrapperStyle: {
@@ -49,6 +51,7 @@ class Documentation extends React.Component {
     this.handleSwitchToCardPage = this.handleSwitchToCardPage.bind(this);
     this.handleSwitchToFormsPage = this.handleSwitchToFormsPage.bind(this);
     this.handleSwitchToGridPage = this.handleSwitchToGridPage.bind(this);
+    this.handleSwitchToNavPage = this.handleSwitchToNavPage.bind(this);
   }
 
   handleSwitchToButtonPage(){
@@ -135,6 +138,28 @@ class Documentation extends React.Component {
     });
   }
 
+  handleSwitchToNavPage(){
+    let newState = this.state;
+    newState.title = 'navbar';
+    newState.example = <Navbar />;
+    newState.body = `Fully responsive navbars, use the class ".nav" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"`;
+    newState.codeSnippet = <NavbarCode />;
+    newState.title2 = '';
+    newState.example2 = '';
+    newState.body2 = '';
+    newState.codeSnippet2 = '';
+    this.setState({
+      title: newState.title,
+      example: newState.example,
+      body: newState.body,
+      codeSnippet: newState.codeSnippet,
+      title2: newState.title2,
+      example2: newState.example2,
+      body2: newState.body2,
+      codeSnippet2: newState.codeSnippet2
+    });
+  }
+
 
   render(){
     return(
@@ -143,7 +168,8 @@ class Documentation extends React.Component {
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
           onSwitchToCardPage={this.handleSwitchToCardPage}
           onSwitchToFormsPage={this.handleSwitchToFormsPage}
-          onSwitchToGridPage={this.handleSwitchToGridPage}/>
+          onSwitchToGridPage={this.handleSwitchToGridPage}
+          onSwitchToNavPage={this.handleSwitchToNavPage}/>
         <Item
           title={this.state.title}
           example={this.state.example}

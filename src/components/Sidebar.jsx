@@ -34,7 +34,7 @@ function Sidebar(props){
       <p onClick={props.onSwitchToGridPage}>Grid</p>
       <p>Icons</p>
       <p>Mixins</p>
-      <p>Navbar</p>
+      <p onClick={props.onSwitchToNavPage}>Navbar</p>
       <p>Sidebar</p>
 
       <style jsx>{`
@@ -52,11 +52,12 @@ function Sidebar(props){
         p {
           width: 100%;
           padding-left: 15px;
+          padding: 8px 0px 8px 15px;
         }
 
         p:hover {
           cursor: pointer;
-          background-color: #9B9B9B;
+          background: #9B9B9B;
           color: white;
         }
 

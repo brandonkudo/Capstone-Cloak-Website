@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function Header(){
+function Navbar(){
   const styles = {
     wrapperStyle: {
-      width: '100vw',
+      width: '700px',
       background: '#3C3B3B',
       display: 'flex',
       flexDirection: 'row',
@@ -16,12 +15,11 @@ function Header(){
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      width: '80vw'
+      width: '500px'
     },
     logoStyle: {
       fontFamily: 'futura',
       color: 'white',
-      textDecoration: 'underline',
       textTransform: 'uppercase',
       letterSpacing: '5px'
     },
@@ -35,20 +33,21 @@ function Header(){
     linkWrapper: {
       display: 'flex',
       flexDirection: 'row',
-      width: '300px',
-      justifyContent: 'space-between'
+      width: '150px',
+      justifyContent: 'space-between',
+      alignItems: 'center'
     }
   };
-  return (
+  return(
     <div style={styles.wrapperStyle}>
 
       <div style={styles.containerStyle}>
-        <Link to='/' style={styles.logoStyle}>Cloak</Link>
+        <p style={styles.logoStyle}>Logo</p>
 
         <div style={styles.linkWrapper}>
-          <Link to='/' style={styles.linkStyle} className="header-link"><p>Home</p></Link>
-          <Link to='/about' style={styles.linkStyle}>About</Link>
-          <Link to='/documentation' style={styles.linkStyle}>Documentation</Link>
+          <p style={styles.linkStyle}>Link</p>
+          <p style={styles.linkStyle}>Link</p>
+          <p style={styles.linkStyle}>Link</p>
         </div>
 
       </div>
@@ -57,4 +56,4 @@ function Header(){
   );
 }
 
-export default Header;
+export default Navbar;
