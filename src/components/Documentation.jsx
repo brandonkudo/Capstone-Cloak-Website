@@ -86,11 +86,7 @@ class Documentation extends React.Component {
     newState.title = 'form';
     newState.example = <Forms />;
     newState.body = 'We have a number of different components to customize your forms. These are the default styles for the <input>, <textarea>, <input type="radio">, and <input type="checkbox"> HTML tags.';
-    newState.codeSnippet = `<input>
-                            <textarea>
-                            <input type="radio">
-                            <input type="checkbox">
-                            `;
+    newState.codeSnippet = '';
     this.setState({
       title: newState.title,
       example: newState.example,
@@ -168,7 +164,7 @@ class Documentation extends React.Component {
 
   render(){
     return(
-      <div style={styles.wrapperStyle}>
+      <div style={styles.wrapperStyle} className='docs-wrapper'>
         <Sidebar
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
           onSwitchToCardPage={this.handleSwitchToCardPage}
@@ -185,6 +181,14 @@ class Documentation extends React.Component {
           example2={this.state.example2}
           body2={this.state.body2}
           codeSnippet2={this.state.codeSnippet2}/>
+
+        <style jsx global>{`
+          @media screen and (min-width: 1400px){
+            .docs-wrapper {
+              height: 1675px;
+            }
+          }
+        `}</style>
       </div>
     );
   }

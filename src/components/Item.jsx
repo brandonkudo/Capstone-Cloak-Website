@@ -3,10 +3,8 @@ import React from 'react';
 function Item(props){
   const styles = {
     wrapperStyle: {
-      padding: '25px',
-      width: '800px',
-      height: '575px',
-      overflow: 'scroll'
+      display: 'flex',
+      justifyContent: 'center'
     },
     titleStyle: {
       textTransform: 'uppercase',
@@ -32,24 +30,37 @@ function Item(props){
   };
   return(
     <div style={styles.wrapperStyle} className='wrapper'>
+      <div className='container'>
+        <h1 style={styles.titleStyle}>{props.title}</h1>
+        <div style={styles.exampleStyle}>{props.example}</div>
+        <p style={styles.bodyStyle}>{props.body}</p>
+        <div>{props.codeSnippet}</div>
 
-      <h1 style={styles.titleStyle}>{props.title}</h1>
-      <div style={styles.exampleStyle}>{props.example}</div>
-      <p style={styles.bodyStyle}>{props.body}</p>
-      <div>{props.codeSnippet}</div>
+        <h1 style={styles.titleStyle}>{props.title2}</h1>
+        <div style={styles.exampleStyle}>{props.example2}</div>
+        <p style={styles.bodyStyle}>{props.body2}</p>
+        <div>{props.codeSnippet2}</div>
+      </div>
 
-      <h1 style={styles.titleStyle}>{props.title2}</h1>
-      <div style={styles.exampleStyle}>{props.example2}</div>
-      <p style={styles.bodyStyle}>{props.body2}</p>
-      <div>{props.codeSnippet2}</div>
-
-      <style jsx>{`
-
-          @media screen and (min-width: 1400px) {
+      <style jsx global>{`
+          @media screen and (max-width: 1025px) {
             .wrapper {
-              width: 1400px;
+              width: 800px;
+              height: 575px;
+              overflow: scroll;
+              padding: 25px 0 0 25px;
             }
           }
+
+          @media screen and (min-width: 1026px) {
+            .wrapper {
+              width: 800px;
+              padding: 50px 0 0 50px;
+              overflow: visible;
+            }
+          }
+
+
     `}</style>
 
     </div>

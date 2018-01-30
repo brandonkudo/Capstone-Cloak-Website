@@ -5,11 +5,8 @@ function Sidebar(props){
   const styles = {
     containerStyle: {
       backgroundColor: '#EAE8E8',
-      width: '225px',
-      height: '575px',
       display: 'flex',
-      flexDirection: 'column',
-      overflow: 'scroll'
+      flexDirection: 'column'
     },
     listStyle: {
       display: 'flex',
@@ -61,9 +58,19 @@ function Sidebar(props){
           color: white;
         }
 
-        @media screen and (min-width: 1400px) {
+        @media screen and (max-width: 1025px){
           div {
-            height: 1400px;
+            width: 225px;
+            height: 575px;
+            overflow: scroll;
+          }
+        }
+
+        @media screen and (min-width: 1026px) {
+          div {
+            width: 250px;
+            height: 1725px;
+            overflow: visible;
           }
         }
 

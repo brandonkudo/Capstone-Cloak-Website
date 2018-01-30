@@ -28,7 +28,6 @@ function Header(){
     },
     linkStyle: {
       fontFamily: 'futura',
-      color: 'white',
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '12px'
@@ -49,13 +48,24 @@ function Header(){
         <Link to='/' style={styles.logoStyle}>Cloak</Link>
 
         <div style={styles.linkWrapper}>
-          <Link to='/' style={styles.linkStyle}>Home</Link>
-          <Link to='/about' style={styles.linkStyle}>About</Link>
-          <Link to='/documentation' style={styles.linkStyle}>Documentation</Link>
+          <Link to='/' style={styles.linkStyle} className='link'>Home</Link>
+          <Link to='/about' style={styles.linkStyle} className='link'>About</Link>
+          <Link to='/documentation' style={styles.linkStyle} className='link'>Documentation</Link>
         </div>
 
       </div>
 
+      <style jsx global>{`
+        .link {
+          color: white;
+          padding: 12px;
+        }
+
+        .link:hover {
+          background: white;
+          color: #3C3B3B;
+        }
+      `}</style>
     </div>
   );
 }
