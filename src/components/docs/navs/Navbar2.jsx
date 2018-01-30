@@ -10,7 +10,8 @@ function Navbar(){
       justifyContent: 'center',
       height: '40px',
       alignItems: 'center',
-      borderRadius: '3px'
+      borderRadius: '3px',
+      boxShadow: '1px 1px 1px #828282'
     },
     containerStyle: {
       display: 'flex',

@@ -35,7 +35,7 @@ function Sidebar(props){
       <p>Icons</p>
       <p>Mixins</p>
       <p onClick={props.onSwitchToNavPage}>Navbar</p>
-      <p>Sidebar</p>
+      <p onClick={props.onSwitchToSidebarPage}>Sidebar</p>
 
       <style jsx>{`
         * {

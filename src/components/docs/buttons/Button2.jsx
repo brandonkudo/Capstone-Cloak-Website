@@ -8,7 +8,7 @@ function Button(){
       color: 'white',
       textTransform: 'uppercase',
       borderRadius: '3px',
-      boxShadow: '1px 1px 1px black',
+      boxShadow: '1px 1px 1px #828282',
       border: 'none'
     }
   }

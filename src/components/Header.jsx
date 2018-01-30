@@ -16,6 +16,7 @@ function Header(){
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
+      alignItems: 'center',
       width: '80vw'
     },
     logoStyle: {
@@ -30,13 +31,15 @@ function Header(){
       color: 'white',
       textDecoration: 'none',
       textTransform: 'uppercase',
-      fontSize: '12px',
+      fontSize: '12px'
     },
     linkWrapper: {
       display: 'flex',
       flexDirection: 'row',
       width: '300px',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      height: '100%'
     }
   };
   return (
@@ -46,7 +49,7 @@ function Header(){
         <Link to='/' style={styles.logoStyle}>Cloak</Link>
 
         <div style={styles.linkWrapper}>
-          <Link to='/' style={styles.linkStyle} className="header-link"><p>Home</p></Link>
+          <Link to='/' style={styles.linkStyle}>Home</Link>
           <Link to='/about' style={styles.linkStyle}>About</Link>
           <Link to='/documentation' style={styles.linkStyle}>Documentation</Link>
         </div>

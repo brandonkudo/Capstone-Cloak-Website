@@ -29,7 +29,7 @@ function Item(props){
       color: '#3C3B3B',
       fontSize: '12px'
     }
-  }
+  };
   return(
     <div style={styles.wrapperStyle}>
 
