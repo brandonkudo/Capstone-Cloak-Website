@@ -41,4 +41,4 @@ function SidebarItem(){
   );
 }
 
-export default SidebarItem;
+export {SidebarItem};

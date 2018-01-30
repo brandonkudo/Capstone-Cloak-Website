@@ -6,7 +6,7 @@ import {Card, CardCode, Card2, Card2Code} from './docs/cards';
 import Forms from './docs/Forms';
 import {Grid, GridCode} from './docs/grids';
 import {Navbar, NavbarCode, Navbar2, Navbar2Code} from './docs/navs';
-import SidebarItem from './docs/sidebars/SidebarItem';
+import {SidebarItem, SidebarCode} from './docs/sidebars';
 
 const styles = {
   wrapperStyle: {
@@ -144,7 +144,7 @@ class Documentation extends React.Component {
     newState.title = 'sidebar';
     newState.example = <SidebarItem />;
     newState.body = 'A sidebar with clickable links and hover styling.  Can be oriented left or right.  Use the class ".sidebar-left" to place on left, or ".sidebar-right" to place on the right.';
-    newState.codeSnippet = '';
+    newState.codeSnippet = <SidebarCode />;
     newState.title2 = '';
     newState.example2 = '';
     newState.body2 = '';
