@@ -4,7 +4,7 @@ function Item(props){
   const styles = {
     wrapperStyle: {
       display: 'flex',
-      justifyContent: 'center'
+      flexDirection: 'column'
     },
     titleStyle: {
       textTransform: 'uppercase',
@@ -30,7 +30,6 @@ function Item(props){
   };
   return(
     <div style={styles.wrapperStyle} className='wrapper'>
-      <div className='container'>
         <h1 style={styles.titleStyle}>{props.title}</h1>
         <div style={styles.exampleStyle}>{props.example}</div>
         <p style={styles.bodyStyle}>{props.body}</p>
@@ -40,7 +39,6 @@ function Item(props){
         <div style={styles.exampleStyle}>{props.example2}</div>
         <p style={styles.bodyStyle}>{props.body2}</p>
         <div>{props.codeSnippet2}</div>
-      </div>
 
       <style jsx global>{`
           @media screen and (max-width: 1025px) {

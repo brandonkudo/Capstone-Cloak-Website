@@ -25,7 +25,7 @@ function Sidebar(props){
       <p>Animations</p>
       <p onClick={props.onSwitchToButtonPage}>Buttons</p>
       <p onClick={props.onSwitchToCardPage}>Cards</p>
-      <p>Colors</p>
+      <p onClick={props.onSwitchToColorsPage}>Colors</p>
       <p>Fonts</p>
       <p onClick={props.onSwitchToFormsPage}>Forms</p>
       <p onClick={props.onSwitchToGridPage}>Grid</p>

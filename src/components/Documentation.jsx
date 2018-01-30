@@ -3,7 +3,8 @@ import Sidebar from './Sidebar';
 import Item from './Item';
 import {Button, ButtonCode, Button2, Button2Code} from './docs/buttons';
 import {Card, CardCode, Card2, Card2Code} from './docs/cards';
-import Forms from './docs/Forms';
+import {Palette1} from './docs/colors';
+import Forms from './docs/forms/Forms';
 import {Grid, GridCode} from './docs/grids';
 import {Navbar, NavbarCode, Navbar2, Navbar2Code} from './docs/navs';
 import {SidebarItem, SidebarCode} from './docs/sidebars';
@@ -31,6 +32,7 @@ class Documentation extends React.Component {
     };
     this.handleSwitchToButtonPage = this.handleSwitchToButtonPage.bind(this);
     this.handleSwitchToCardPage = this.handleSwitchToCardPage.bind(this);
+    this.handleSwitchToColorsPage = this.handleSwitchToColorsPage.bind(this);
     this.handleSwitchToFormsPage = this.handleSwitchToFormsPage.bind(this);
     this.handleSwitchToGridPage = this.handleSwitchToGridPage.bind(this);
     this.handleSwitchToNavPage = this.handleSwitchToNavPage.bind(this);
@@ -69,6 +71,28 @@ class Documentation extends React.Component {
     newState.example2 = <Card2 />;
     newState.body2 = 'This is a card. Use the class ".card" in a parent div, and the classes ".card-head" and ".card-body" as it\'s child elements.';
     newState.codeSnippet2 = <Card2Code />;
+    this.setState({
+      title: newState.title,
+      example: newState.example,
+      body: newState.body,
+      codeSnippet: newState.codeSnippet,
+      title2: newState.title2,
+      example2: newState.example2,
+      body2: newState.body2,
+      codeSnippet2: newState.codeSnippet2
+    });
+  }
+
+  handleSwitchToColorsPage(){
+    let newState = this.state;
+    newState.title = 'Colors';
+    newState.example = <Palette1 />;
+    newState.body = '';
+    newState.codeSnippet = '';
+    newState.title2 = '';
+    newState.example2 = '';
+    newState.body2 = '';
+    newState.codeSnippet2 = '';
     this.setState({
       title: newState.title,
       example: newState.example,
@@ -168,6 +192,7 @@ class Documentation extends React.Component {
         <Sidebar
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
           onSwitchToCardPage={this.handleSwitchToCardPage}
+          onSwitchToColorsPage={this.handleSwitchToColorsPage}
           onSwitchToFormsPage={this.handleSwitchToFormsPage}
           onSwitchToGridPage={this.handleSwitchToGridPage}
           onSwitchToNavPage={this.handleSwitchToNavPage}
