@@ -28,4 +28,4 @@ function Card2Code(){
   );
 }
 
-export default Card2Code;
+export {Card2Code};

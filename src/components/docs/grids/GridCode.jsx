@@ -76,4 +76,4 @@ function GridCode(){
   );
 }
 
-export default GridCode;
+export {GridCode};

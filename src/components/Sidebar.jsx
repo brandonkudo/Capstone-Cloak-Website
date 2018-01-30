@@ -61,6 +61,12 @@ function Sidebar(props){
           color: white;
         }
 
+        @media screen and (min-width: 1400px) {
+          div {
+            height: 1400px;
+          }
+        }
+
       `}</style>
 
     </div>

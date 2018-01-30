@@ -1,21 +1,11 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Item from './Item';
-import Button from './docs/buttons/Button';
-import ButtonCode from './docs/buttons/ButtonCode';
-import Button2 from './docs/buttons/Button2';
-import Button2Code from './docs/buttons/Button2Code';
-import Card from './docs/cards/Card';
-import CardCode from './docs/cards/CardCode';
-import Card2 from './docs/cards/Card2';
-import Card2Code from './docs/cards/Card2Code';
+import {Button, ButtonCode, Button2, Button2Code} from './docs/buttons';
+import {Card, CardCode, Card2, Card2Code} from './docs/cards';
 import Forms from './docs/Forms';
-import Grid from './docs/grids/Grid';
-import GridCode from './docs/grids/GridCode';
-import Navbar from './docs/navs/Navbar';
-import NavbarCode from './docs/navs/NavbarCode';
-import Navbar2 from './docs/navs/Navbar2';
-import Navbar2Code from './docs/navs/Navbar2Code';
+import {Grid, GridCode} from './docs/grids';
+import {Navbar, NavbarCode, Navbar2, Navbar2Code} from './docs/navs';
 import SidebarItem from './docs/sidebars/SidebarItem';
 
 const styles = {
@@ -23,17 +13,6 @@ const styles = {
     width: '100vw',
     display: 'flex',
     flexDirection: 'row'
-  },
-  codeSnippetStyle: {
-    backgroundColor: '#D8D8D8',
-    padding: '10px',
-    marginBottom: '60px',
-    border: '1px solid grey'
-  },
-  snippetTextStyle: {
-    fontFamily: 'courier',
-    color: '#3C3B3B',
-    fontSize: '12px'
   }
 };
 

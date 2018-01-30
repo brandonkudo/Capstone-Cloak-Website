@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button(){
+function Button2(){
   const styles = {
     buttonStyle: {
       background: 'linear-gradient(to bottom, #6E6E6E, #3C3B3B)',
@@ -19,4 +19,4 @@ function Button(){
   );
 }
 
-export default Button;
+export {Button2};

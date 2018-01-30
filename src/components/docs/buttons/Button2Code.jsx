@@ -22,4 +22,4 @@ function Button2Code(){
   );
 }
 
-export default Button2Code;
+export {Button2Code};

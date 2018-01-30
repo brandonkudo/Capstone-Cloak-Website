@@ -32,4 +32,4 @@ function Navbar2Code(){
   );
 }
 
-export default Navbar2Code;
+export {Navbar2Code};

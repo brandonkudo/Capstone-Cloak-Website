@@ -509,4 +509,4 @@ function Grid(){
   );
 }
 
-export default Grid;
+export {Grid};

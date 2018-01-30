@@ -31,7 +31,7 @@ function Item(props){
     }
   };
   return(
-    <div style={styles.wrapperStyle}>
+    <div style={styles.wrapperStyle} className='wrapper'>
 
       <h1 style={styles.titleStyle}>{props.title}</h1>
       <div style={styles.exampleStyle}>{props.example}</div>
@@ -43,8 +43,17 @@ function Item(props){
       <p style={styles.bodyStyle}>{props.body2}</p>
       <div>{props.codeSnippet2}</div>
 
+      <style jsx>{`
+
+          @media screen and (min-width: 1400px) {
+            .wrapper {
+              width: 1400px;
+            }
+          }
+    `}</style>
 
     </div>
+
   );
 }
 

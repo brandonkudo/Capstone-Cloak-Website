@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Navbar(){
+function Navbar2(){
   const styles = {
     wrapperStyle: {
       width: '100%',
@@ -58,4 +58,4 @@ function Navbar(){
   );
 }
 
-export default Navbar;
+export {Navbar2};

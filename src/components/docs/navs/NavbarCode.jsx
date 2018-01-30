@@ -32,4 +32,4 @@ function NavbarCode(){
   );
 }
 
-export default NavbarCode;
+export {NavbarCode};
