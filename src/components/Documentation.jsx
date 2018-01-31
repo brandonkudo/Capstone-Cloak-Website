@@ -32,6 +32,7 @@ class Documentation extends React.Component {
       codeSnippet2: ''
     };
     this.handleSwitchToInstallPage = this.handleSwitchToInstallPage.bind(this);
+    this.handleSwitchToAnimationsPage = this.handleSwitchToAnimationsPage.bind(this);
     this.handleSwitchToButtonPage = this.handleSwitchToButtonPage.bind(this);
     this.handleSwitchToCardPage = this.handleSwitchToCardPage.bind(this);
     this.handleSwitchToColorsPage = this.handleSwitchToColorsPage.bind(this);
@@ -41,11 +42,40 @@ class Documentation extends React.Component {
     this.handleSwitchToSidebarPage = this.handleSwitchToSidebarPage.bind(this);
   }
 
+  handlePageSwitch(title, exampe) {
+    let newState = this.state;
+    // ?
+    this.setState({
+      title: newState.title,
+      example: newState.example,
+      body: newState.body,
+      codeSnippet: newState.codeSnippet
+    });
+  }
+
   handleSwitchToInstallPage(){
     let newState = this.state;
     newState.title = 'how to install';
     newState.example = <InstallPage />;
     newState.body = <InstallCode />;
+    newState.codeSnippet = '';
+    newState.title2 = '';
+    newState.example2 = '';
+    newState.body2 = '';
+    newState.codeSnippet2 = '';
+    this.setState({
+      title: newState.title,
+      example: newState.example,
+      body: newState.body,
+      codeSnippet: newState.codeSnippet
+    });
+  }
+
+  handleSwitchToAnimationsPage(){
+    let newState = this.state;
+    newState.title = 'Click to shrink';
+    newState.example = <Button />;
+    newState.body = '';
     newState.codeSnippet = '';
     newState.title2 = '';
     newState.example2 = '';
@@ -191,7 +221,7 @@ class Documentation extends React.Component {
     let newState = this.state;
     newState.title = 'sidebar';
     newState.example = <SidebarItem />;
-    newState.body = 'A sidebar with clickable links and hover styling.  Can be oriented left or right.  Use the class ".sidebar-left" to place on left, or ".sidebar-right" to place on the right.';
+    newState.body = 'A sidebar with clickable links and hover styling.  Can be oriented left or right.  Use efault class ".sidebar-left" to place on left, or ".sidebar-right" to place on the right.';
     newState.codeSnippet = <SidebarCode />;
     newState.title2 = '';
     newState.example2 = '';
@@ -214,7 +244,9 @@ class Documentation extends React.Component {
     return(
       <div style={styles.wrapperStyle} className='docs-wrapper'>
         <Sidebar
+          onPageSwitch={this.onPageSwitch}
           onSwitchToInstallPage={this.handleSwitchToInstallPage}
+          onSwitchToAnimationsPage={this.handleSwitchToAnimationsPage}
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
           onSwitchToCardPage={this.handleSwitchToCardPage}
           onSwitchToColorsPage={this.handleSwitchToColorsPage}

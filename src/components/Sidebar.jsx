@@ -24,7 +24,7 @@ function Sidebar(props){
       <p
         onClick={props.onSwitchToInstallPage}
         style={styles.installStyle}>Install</p>
-      <p>Animations</p>
+      <p onClick={props.onSwitchToAnimationsPage}>Animations</p>
       <p onClick={props.onSwitchToButtonPage}>Buttons</p>
       <p onClick={props.onSwitchToCardPage}>Cards</p>
       <p onClick={props.onSwitchToColorsPage}>Colors</p>
