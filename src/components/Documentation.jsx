@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 import Item from './Item';
 import {Button, ButtonCode, Button2, Button2Code} from './docs/buttons';
 import {Card, CardCode, Card2, Card2Code} from './docs/cards';
-import {Palette1} from './docs/colors';
+import {Palette1, Palette1Code} from './docs/colors';
 import Forms from './docs/forms/Forms';
 import {Grid, GridCode} from './docs/grids';
 import {Navbar, NavbarCode, Navbar2, Navbar2Code} from './docs/navs';
@@ -65,11 +65,11 @@ class Documentation extends React.Component {
     let newState = this.state;
     newState.title = 'card with image';
     newState.example = <Card />;
-    newState.body = 'This is a card. Use the class ".card-img" in a parent div, and the classes ".card-img-head" and ".card-img-body" as it\'s child elements.';
+    newState.body = `This is a card. Use the class ".card-img" in a parent div, and the classes ".card-img-head" and ".card-img-body" as it\'s child elements.`;
     newState.codeSnippet = <CardCode />;
     newState.title2 = 'card without image';
     newState.example2 = <Card2 />;
-    newState.body2 = 'This is a card. Use the class ".card" in a parent div, and the classes ".card-head" and ".card-body" as it\'s child elements.';
+    newState.body2 = `This is a card. Use the class ".card" in a parent div, and the classes ".card-head" and ".card-body" as it\'s child elements.`;
     newState.codeSnippet2 = <Card2Code />;
     this.setState({
       title: newState.title,
@@ -87,8 +87,8 @@ class Documentation extends React.Component {
     let newState = this.state;
     newState.title = 'Colors';
     newState.example = <Palette1 />;
-    newState.body = '';
-    newState.codeSnippet = '';
+    newState.body = `We have a number of different color palettes, in order to use them denote which palette and whether you want to change background color or font, then which color in the palette you'd like to use`;
+    newState.codeSnippet = <Palette1Code />;
     newState.title2 = '';
     newState.example2 = '';
     newState.body2 = '';
@@ -208,6 +208,13 @@ class Documentation extends React.Component {
           codeSnippet2={this.state.codeSnippet2}/>
 
         <style jsx global>{`
+
+          @media screen and (max-width: 1025px) {
+            .docs-wrapper {
+              height: 575px;
+            }
+          }
+
           @media screen and (min-width: 1400px){
             .docs-wrapper {
               height: 1675px;
