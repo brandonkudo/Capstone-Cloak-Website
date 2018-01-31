@@ -15,6 +15,23 @@ function Button2(){
   return(
     <div>
       <button style={styles.buttonStyle}>Button</button>
+      <style jsx>{`
+          button:active {
+            animation: clickToShrink 0.2s ease 0s 1;
+          }
+
+          @keyframes clickToShrink {
+            0% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(0.9);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          `}</style>
     </div>
   );
 }
