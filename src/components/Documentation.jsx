@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Item from './Item';
+import {InstallPage, InstallCode} from './docs/install';
 import {Button, ButtonCode, Button2, Button2Code} from './docs/buttons';
 import {Card, CardCode, Card2, Card2Code} from './docs/cards';
 import {Palette1, Palette1Code} from './docs/colors';
@@ -21,15 +22,16 @@ class Documentation extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title: '',
-      example: '',
-      body: '',
+      title: 'how to install',
+      example: <InstallPage />,
+      body: <InstallCode />,
       codeSnippet: '',
       title2: '',
       example2: '',
       body2: '',
       codeSnippet2: ''
     };
+    this.handleSwitchToInstallPage = this.handleSwitchToInstallPage.bind(this);
     this.handleSwitchToButtonPage = this.handleSwitchToButtonPage.bind(this);
     this.handleSwitchToCardPage = this.handleSwitchToCardPage.bind(this);
     this.handleSwitchToColorsPage = this.handleSwitchToColorsPage.bind(this);
@@ -37,6 +39,24 @@ class Documentation extends React.Component {
     this.handleSwitchToGridPage = this.handleSwitchToGridPage.bind(this);
     this.handleSwitchToNavPage = this.handleSwitchToNavPage.bind(this);
     this.handleSwitchToSidebarPage = this.handleSwitchToSidebarPage.bind(this);
+  }
+
+  handleSwitchToInstallPage(){
+    let newState = this.state;
+    newState.title = 'how to install';
+    newState.example = <InstallPage />;
+    newState.body = <InstallCode />;
+    newState.codeSnippet = '';
+    newState.title2 = '';
+    newState.example2 = '';
+    newState.body2 = '';
+    newState.codeSnippet2 = '';
+    this.setState({
+      title: newState.title,
+      example: newState.example,
+      body: newState.body,
+      codeSnippet: newState.codeSnippet
+    });
   }
 
   handleSwitchToButtonPage(){
@@ -194,6 +214,7 @@ class Documentation extends React.Component {
     return(
       <div style={styles.wrapperStyle} className='docs-wrapper'>
         <Sidebar
+          onSwitchToInstallPage={this.handleSwitchToInstallPage}
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
           onSwitchToCardPage={this.handleSwitchToCardPage}
           onSwitchToColorsPage={this.handleSwitchToColorsPage}
