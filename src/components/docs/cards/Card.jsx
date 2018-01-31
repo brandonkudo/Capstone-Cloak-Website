@@ -1,4 +1,5 @@
 import React from 'react';
+import StockImage from '../../../assets/images/stock-image.jpeg';
 
 function Card(){
   const styles = {
@@ -11,9 +12,11 @@ function Card(){
     cardHead: {
       width: '100%',
       height: '50%',
-      backgroundColor: 'peachpuff',
       borderTopLeftRadius: '3px',
-      borderTopRightRadius: '3px'
+      borderTopRightRadius: '3px',
+      backgroundImage: `url(${StockImage})`,
+      background: 'contain',
+      backgroundPosition: 'center'
     },
     cardBody: {
       width: '100%',

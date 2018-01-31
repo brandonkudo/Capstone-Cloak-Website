@@ -45,7 +45,7 @@ function Header(){
     <div style={styles.wrapperStyle}>
 
       <div style={styles.containerStyle}>
-        <Link to='/' style={styles.logoStyle}>Cloak</Link>
+        <Link to='/' style={styles.logoStyle} className='logo'>Cloak</Link>
 
         <div style={styles.linkWrapper}>
           <Link to='/' style={styles.linkStyle} className='link'>Home</Link>
@@ -56,6 +56,10 @@ function Header(){
       </div>
 
       <style jsx global>{`
+        .logo {
+          animation: clickShrink 0.2s ease 0s 1;
+        }
+
         .link {
           color: white;
           padding: 12px;

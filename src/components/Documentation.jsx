@@ -111,6 +111,10 @@ class Documentation extends React.Component {
     newState.example = <Forms />;
     newState.body = 'We have a number of different components to customize your forms. These are the default styles for the <input>, <textarea>, <input type="radio">, and <input type="checkbox"> HTML tags.';
     newState.codeSnippet = '';
+    newState.title2 = '';
+    newState.example2 = '';
+    newState.body2 = '';
+    newState.codeSnippet2 = '';
     this.setState({
       title: newState.title,
       example: newState.example,
