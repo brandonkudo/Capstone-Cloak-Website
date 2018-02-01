@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Item from './Item';
+import {defaultState} from '../defaultState';
 import {InstallPage, InstallCode} from './docs/install';
 import {Button, ButtonCode, Button2, Button2Code} from './docs/buttons';
 import {Card, CardCode, Card2, Card2Code} from './docs/cards';
@@ -22,14 +23,15 @@ class Documentation extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title: 'how to install',
+      title: defaultState.documentationElements[0].title,
       example: <InstallPage />,
       body: <InstallCode />,
       codeSnippet: '',
       title2: '',
       example2: '',
       body2: '',
-      codeSnippet2: ''
+      codeSnippet2: '',
+      keyValue: 0
     };
     this.handleSwitchToInstallPage = this.handleSwitchToInstallPage.bind(this);
     this.handleSwitchToAnimationsPage = this.handleSwitchToAnimationsPage.bind(this);
@@ -40,35 +42,34 @@ class Documentation extends React.Component {
     this.handleSwitchToGridPage = this.handleSwitchToGridPage.bind(this);
     this.handleSwitchToNavPage = this.handleSwitchToNavPage.bind(this);
     this.handleSwitchToSidebarPage = this.handleSwitchToSidebarPage.bind(this);
+    this.pageSwitch = this.pageSwitch.bind(this);
   }
 
-  handlePageSwitch(title, exampe) {
+  pageSwitch(){
+    let newKeyValue = this.state.keyValue;
+    console.log(newKeyValue);
+
+  }
+
+  handlePageSwitch(newTitle, newExample, newBody, newCodeSnippet) {
     let newState = this.state;
-    // ?
     this.setState({
-      title: newState.title,
+      title: title,
       example: newState.example,
       body: newState.body,
       codeSnippet: newState.codeSnippet
     });
   }
+
+
 
   handleSwitchToInstallPage(){
-    let newState = this.state;
-    newState.title = 'how to install';
-    newState.example = <InstallPage />;
-    newState.body = <InstallCode />;
-    newState.codeSnippet = '';
-    newState.title2 = '';
-    newState.example2 = '';
-    newState.body2 = '';
-    newState.codeSnippet2 = '';
-    this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet
-    });
+    console.log(defaultState.documentationElements.title);
+    let newTitle = defaultState.documentationElements[0].title;
+    let newExample = defaultState.documentationElements[0].example;
+    let newBody = defaultState.documentationElements[0].body;
+    let newCodeSnippet = defaultState.documentationElements[0].codeSnippet;
+    this.handlePageSwitch(newState, newTitle, newBody, newCodeSnippet)
   }
 
   handleSwitchToAnimationsPage(){
@@ -244,8 +245,7 @@ class Documentation extends React.Component {
     return(
       <div style={styles.wrapperStyle} className='docs-wrapper'>
         <Sidebar
-          onPageSwitch={this.onPageSwitch}
-          onSwitchToInstallPage={this.handleSwitchToInstallPage}
+          switchPage={this.pageSwitch}
           onSwitchToAnimationsPage={this.handleSwitchToAnimationsPage}
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
           onSwitchToCardPage={this.handleSwitchToCardPage}

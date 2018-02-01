@@ -3,8 +3,8 @@ export const defaultState = {
     {
       title: 'string1',
       body: 'string1',
-      codeSnippet: [],
-      example: [],
+      codeSnippet: 'string1',
+      example: 'string1',
       id: '1',
     },
     {
