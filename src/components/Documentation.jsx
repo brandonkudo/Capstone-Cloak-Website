@@ -55,11 +55,13 @@ class Documentation extends React.Component {
           title2: newPage.title2,
           body2: newPage.body2,
         });
+        console.log('pageswitch');
       }
     }
   }
 
   handleSwitchToInstallPage(){
+    console.log('firstfunction');
     this.setState({
       example: '',
       codeSnippet: <InstallCode />,

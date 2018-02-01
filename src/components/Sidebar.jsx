@@ -80,5 +80,17 @@ function Sidebar(props){
   );
 }
 
+Sidebar.propTypes = {
+  onSwitchToInstallPage: PropTypes.func,
+  onSwitchToAnimationsPage: PropTypes.func,
+  onSwitchToButtonPage: PropTypes.func,
+  onSwitchToCardPage: PropTypes.func,
+  onSwitchToColorsPage: PropTypes.func,
+  onSwitchToFormsPage: PropTypes.func,
+  onSwitchToGridPage: PropTypes.func,
+  onSwitchToNavPage: PropTypes.func,
+  onSwitchToSidebarPage: PropTypes.func
+};
+
 
 export default Sidebar;
