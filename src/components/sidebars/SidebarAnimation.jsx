@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Sidebar(props){
+function SidebarAnimation(props){
   const styles = {
     containerStyle: {
       backgroundColor: '#EAE8E8',
@@ -17,12 +17,15 @@ function Sidebar(props){
     },
     installStyle: {
       marginTop: '30px'
+    },
+    animationStyle: {
+      backgroundColor: '#3C3B3B'
     }
   };
   return(
     <div style={styles.containerStyle}>
       <p onClick={props.onSwitchToInstallPage} style={styles.installStyle}>Install</p>
-      <p onClick={props.onSwitchToAnimationsPage}>Animations</p>
+      <p onClick={props.onSwitchToAnimationsPage} style={styles.animationStyle}>Animations</p>
       <p onClick={props.onSwitchToButtonPage}>Buttons</p>
       <p onClick={props.onSwitchToCardPage}>Cards</p>
       <p onClick={props.onSwitchToColorsPage}>Colors</p>
@@ -80,7 +83,7 @@ function Sidebar(props){
   );
 }
 
-Sidebar.propTypes = {
+SidebarAnimation.propTypes = {
   onSwitchToInstallPage: PropTypes.func,
   onSwitchToAnimationsPage: PropTypes.func,
   onSwitchToButtonPage: PropTypes.func,
@@ -93,4 +96,4 @@ Sidebar.propTypes = {
 };
 
 
-export default Sidebar;
+export {SidebarAnimation};

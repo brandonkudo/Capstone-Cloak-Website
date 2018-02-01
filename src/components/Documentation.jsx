@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from './Sidebar';
+import {Sidebar, SidebarAnimation} from './sidebars';
 import Item from './Item';
 import {defaultState} from '../defaultState';
 import {InstallPage, InstallCode} from './docs/install';
@@ -9,7 +9,7 @@ import {Palette1, Palette1Code} from './docs/colors';
 import Forms from './docs/forms/Forms';
 import {Grid, GridCode} from './docs/grids';
 import {Navbar, NavbarCode, Navbar2, Navbar2Code} from './docs/navs';
-import {SidebarItem, SidebarCode} from './docs/sidebars';
+import {SidebarItem, SidebarCode} from './docs/sidebarpages';
 
 const styles = {
   wrapperStyle: {
@@ -48,7 +48,7 @@ class Documentation extends React.Component {
   pageSwitch(){
     for (let i = 0; i < defaultState.documentationElements.length; i++) {
       let newPage = defaultState.documentationElements[i];
-      if (this.state.id === newPage.id) {
+      if (id === newPage.id) {
         this.setState({
           title: newPage.title,
           body: newPage.body,
@@ -162,6 +162,7 @@ class Documentation extends React.Component {
 
 
   render(){
+
     return(
       <div style={styles.wrapperStyle} className='docs-wrapper'>
         <Sidebar
