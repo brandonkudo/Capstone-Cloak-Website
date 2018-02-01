@@ -23,10 +23,10 @@ class Documentation extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title: '',
+      title: 'how to install',
       example: '',
-      body: '',
-      codeSnippet: '',
+      body: 'In order to use this library simply download the following repository:',
+      codeSnippet: <InstallCode />,
       title2: '',
       example2: '',
       body2: '',
