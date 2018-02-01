@@ -21,9 +21,7 @@ function Sidebar(props){
   };
   return(
     <div style={styles.containerStyle}>
-      <p
-        onClick={props.switchPage}
-        style={styles.installStyle}>Install</p>
+      <p onClick={props.onSwitchToInstallPage} style={styles.installStyle}>Install</p>
       <p onClick={props.onSwitchToAnimationsPage}>Animations</p>
       <p onClick={props.onSwitchToButtonPage}>Buttons</p>
       <p onClick={props.onSwitchToCardPage}>Cards</p>

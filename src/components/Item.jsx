@@ -30,15 +30,15 @@ function Item(props){
   };
   return(
     <div style={styles.wrapperStyle} className='wrapper'>
-        <h1 style={styles.titleStyle}>{props.title}</h1>
-        <div style={styles.exampleStyle}>{props.example}</div>
-        <p style={styles.bodyStyle}>{props.body}</p>
-        <div>{props.codeSnippet}</div>
+      <h1 style={styles.titleStyle}>{props.title}</h1>
+      <div style={styles.exampleStyle}>{props.example}</div>
+      <p style={styles.bodyStyle}>{props.body}</p>
+      <div>{props.codeSnippet}</div>
 
-        <h1 style={styles.titleStyle}>{props.title2}</h1>
-        <div style={styles.exampleStyle}>{props.example2}</div>
-        <p style={styles.bodyStyle}>{props.body2}</p>
-        <div>{props.codeSnippet2}</div>
+      <h1 style={styles.titleStyle}>{props.title2}</h1>
+      <div style={styles.exampleStyle}>{props.example2}</div>
+      <p style={styles.bodyStyle}>{props.body2}</p>
+      <div>{props.codeSnippet2}</div>
 
       <style jsx global>{`
           @media screen and (max-width: 1025px) {

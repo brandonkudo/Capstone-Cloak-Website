@@ -23,15 +23,15 @@ class Documentation extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title: defaultState.documentationElements[0].title,
+      title: 'install',
       example: <InstallPage />,
-      body: <InstallCode />,
-      codeSnippet: '',
+      body: '',
+      codeSnippet: <InstallCode />,
       title2: '',
       example2: '',
       body2: '',
       codeSnippet2: '',
-      keyValue: 0
+      id: 1
     };
     this.handleSwitchToInstallPage = this.handleSwitchToInstallPage.bind(this);
     this.handleSwitchToAnimationsPage = this.handleSwitchToAnimationsPage.bind(this);
@@ -46,71 +46,39 @@ class Documentation extends React.Component {
   }
 
   pageSwitch(){
-    let newKeyValue = this.state.keyValue;
-    console.log(newKeyValue);
-
+    for (let i = 0; i < defaultState.documentationElements.length; i++) {
+      let newPage = defaultState.documentationElements[i];
+      if (this.state.id === newPage.id) {
+        this.setState({
+          title: newPage.title,
+          body: newPage.body,
+          title2: newPage.title2,
+          body2: newPage.body2,
+        });
+      }
+    }
   }
-
-  handlePageSwitch(newTitle, newExample, newBody, newCodeSnippet) {
-    let newState = this.state;
-    this.setState({
-      title: title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet
-    });
-  }
-
-
 
   handleSwitchToInstallPage(){
-    console.log(defaultState.documentationElements.title);
-    let newTitle = defaultState.documentationElements[0].title;
-    let newExample = defaultState.documentationElements[0].example;
-    let newBody = defaultState.documentationElements[0].body;
-    let newCodeSnippet = defaultState.documentationElements[0].codeSnippet;
-    this.handlePageSwitch(newState, newTitle, newBody, newCodeSnippet)
+    this.setState({
+      example: <InstallPage />,
+      codeSnippet: <InstallCode />,
+      id: 1
+    });
+    this.pageSwitch();
   }
 
   handleSwitchToAnimationsPage(){
-    let newState = this.state;
-    newState.title = 'Click to shrink';
-    newState.example = <Button />;
-    newState.body = '';
-    newState.codeSnippet = '';
-    newState.title2 = '';
-    newState.example2 = '';
-    newState.body2 = '';
-    newState.codeSnippet2 = '';
-    this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet
-    });
+    this.setState({id: 2});
+    this.pageSwitch();
   }
 
   handleSwitchToButtonPage(){
-    let newState = this.state;
-    newState.title = 'button';
-    newState.example = <Button />;
-    newState.body = 'This is how the default button is styled. Simply use by implementing the button HTML tag.';
-    newState.codeSnippet = <ButtonCode />;
-    newState.title2 = 'gradient button';
-    newState.example2 = <Button2 />;
-    newState.body2 = 'This is the gradient button. Use by implementing the class ".btn-gradient".';
-    newState.codeSnippet2 = <Button2Code />;
-    this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet,
-      title2: newState.title2,
-      example2: newState.example2,
-      body2: newState.body2,
-      codeSnippet2: newState.codeSnippet2
-    });
+    this.setState({id: 3});
+    this.pageSwitch();
   }
+
+
 
   handleSwitchToCardPage(){
     let newState = this.state;
@@ -245,7 +213,7 @@ class Documentation extends React.Component {
     return(
       <div style={styles.wrapperStyle} className='docs-wrapper'>
         <Sidebar
-          switchPage={this.pageSwitch}
+          onSwitchToInstallPage={this.handleSwitchToInstallPage}
           onSwitchToAnimationsPage={this.handleSwitchToAnimationsPage}
           onSwitchToButtonPage={this.handleSwitchToButtonPage}
           onSwitchToCardPage={this.handleSwitchToCardPage}
