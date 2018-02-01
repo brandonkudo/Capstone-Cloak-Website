@@ -23,16 +23,17 @@ class Documentation extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      title: 'install',
-      example: <InstallPage />,
+      title: '',
+      example: '',
       body: '',
-      codeSnippet: <InstallCode />,
+      codeSnippet: '',
       title2: '',
       example2: '',
       body2: '',
       codeSnippet2: '',
       id: 1
     };
+    this.pageSwitch = this.pageSwitch.bind(this);
     this.handleSwitchToInstallPage = this.handleSwitchToInstallPage.bind(this);
     this.handleSwitchToAnimationsPage = this.handleSwitchToAnimationsPage.bind(this);
     this.handleSwitchToButtonPage = this.handleSwitchToButtonPage.bind(this);
@@ -42,7 +43,6 @@ class Documentation extends React.Component {
     this.handleSwitchToGridPage = this.handleSwitchToGridPage.bind(this);
     this.handleSwitchToNavPage = this.handleSwitchToNavPage.bind(this);
     this.handleSwitchToSidebarPage = this.handleSwitchToSidebarPage.bind(this);
-    this.pageSwitch = this.pageSwitch.bind(this);
   }
 
   pageSwitch(){
@@ -61,151 +61,101 @@ class Documentation extends React.Component {
 
   handleSwitchToInstallPage(){
     this.setState({
-      example: <InstallPage />,
+      example: '',
       codeSnippet: <InstallCode />,
+      example2: '',
+      codeSnippet2: '',
       id: 1
     });
     this.pageSwitch();
   }
 
   handleSwitchToAnimationsPage(){
-    this.setState({id: 2});
+    this.setState({
+      example: <Button />,
+      codeSnippet: '',
+      example2: '',
+      codeSnippet2: '',
+      id: 2
+    });
     this.pageSwitch();
   }
 
   handleSwitchToButtonPage(){
-    this.setState({id: 3});
+    this.setState({
+      example: <Button />,
+      codeSnippet: <ButtonCode />,
+      example2: <Button2 />,
+      codeSnippet2: <Button2Code />,
+      id: 3
+    });
     this.pageSwitch();
   }
 
-
-
   handleSwitchToCardPage(){
-    let newState = this.state;
-    newState.title = 'card with image';
-    newState.example = <Card />;
-    newState.body = `This is a card. Use the class ".card-img" in a parent div, and the classes ".card-img-head" and ".card-img-body" as it\'s child elements.`;
-    newState.codeSnippet = <CardCode />;
-    newState.title2 = 'card without image';
-    newState.example2 = <Card2 />;
-    newState.body2 = `This is a card. Use the class ".card" in a parent div, and the classes ".card-head" and ".card-body" as it\'s child elements.`;
-    newState.codeSnippet2 = <Card2Code />;
     this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet,
-      title2: newState.title2,
-      example2: newState.example2,
-      body2: newState.body2,
-      codeSnippet2: newState.codeSnippet2
+      example: <Card />,
+      codeSnippet: <CardCode />,
+      example2: <Card2 />,
+      codeSnippet2: <Card2Code />,
+      id: 4
     });
+    this.pageSwitch();
   }
 
   handleSwitchToColorsPage(){
-    let newState = this.state;
-    newState.title = 'Colors';
-    newState.example = <Palette1 />;
-    newState.body = `We have a number of different color palettes, in order to use them denote which palette and whether you want to change background color or font, then which color in the palette you'd like to use`;
-    newState.codeSnippet = <Palette1Code />;
-    newState.title2 = '';
-    newState.example2 = '';
-    newState.body2 = '';
-    newState.codeSnippet2 = '';
     this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet,
-      title2: newState.title2,
-      example2: newState.example2,
-      body2: newState.body2,
-      codeSnippet2: newState.codeSnippet2
+      example: <Palette1 />,
+      codeSnippet: <Palette1Code />,
+      example2: '',
+      codeSnippet2: '',
+      id: 5
     });
+    this.pageSwitch();
   }
 
   handleSwitchToFormsPage(){
-    let newState = this.state;
-    newState.title = 'form';
-    newState.example = <Forms />;
-    newState.body = 'We have a number of different components to customize your forms. These are the default styles for the <input>, <textarea>, <input type="radio">, and <input type="checkbox"> HTML tags.';
-    newState.codeSnippet = '';
-    newState.title2 = '';
-    newState.example2 = '';
-    newState.body2 = '';
-    newState.codeSnippet2 = '';
     this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet
+      example: <Forms />,
+      codeSnippet: '',
+      example2: '',
+      codeSnippet2: '',
+      id: 6
     });
+    this.pageSwitch();
   }
 
   handleSwitchToGridPage(){
-    let newState = this.state;
-    newState.title = 'grid';
-    newState.example = <Grid />;
-    newState.body = 'Cloak uses a 12 column grid system based on flexbox.  It is fully responsive and easy to implement. To use place all items you want into a parent element using the class “.row”.  You can then nest as many as 12 columns within each row; use the class “.col-“ then denote how much of the 12 column width you wish for that column to use.  All columns in a row must add up to 12.';
-    newState.codeSnippet = <GridCode />;
-    newState.title2 = '';
-    newState.example2 = '';
-    newState.body2 = '';
-    newState.codeSnippet2 = '';
     this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet,
-      title2: newState.title2,
-      example2: newState.example2,
-      body2: newState.body2,
-      codeSnippet2: newState.codeSnippet2
+      example: <Grid />,
+      codeSnippet: <GridCode />,
+      example2: '',
+      codeSnippet2: '',
+      id: 7
     });
+    this.pageSwitch();
   }
 
   handleSwitchToNavPage(){
-    let newState = this.state;
-    newState.title = 'navbar';
-    newState.example = <Navbar />;
-    newState.body = 'Fully responsive navbars, use the class ".nav" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"';
-    newState.codeSnippet = <NavbarCode />;
-    newState.title2 = 'gradient navbar';
-    newState.example2 = <Navbar2 />;
-    newState.body2 = 'Navbar with a linear gradient, use the class ".nav-gradient" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"';
-    newState.codeSnippet2 = <Navbar2Code />;
     this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet,
-      title2: newState.title2,
-      example2: newState.example2,
-      body2: newState.body2,
-      codeSnippet2: newState.codeSnippet2
+      example: <Navbar />,
+      codeSnippet: <NavbarCode />,
+      example2: <Navbar2 />,
+      codeSnippet2: <Navbar2Code />,
+      id: 8
     });
+    this.pageSwitch();
   }
 
   handleSwitchToSidebarPage(){
-    let newState = this.state;
-    newState.title = 'sidebar';
-    newState.example = <SidebarItem />;
-    newState.body = 'A sidebar with clickable links and hover styling.  Can be oriented left or right.  Use efault class ".sidebar-left" to place on left, or ".sidebar-right" to place on the right.';
-    newState.codeSnippet = <SidebarCode />;
-    newState.title2 = '';
-    newState.example2 = '';
-    newState.body2 = '';
-    newState.codeSnippet2 = '';
     this.setState({
-      title: newState.title,
-      example: newState.example,
-      body: newState.body,
-      codeSnippet: newState.codeSnippet,
-      title2: newState.title2,
-      example2: newState.example2,
-      body2: newState.body2,
-      codeSnippet2: newState.codeSnippet2
+      example: <SidebarItem />,
+      codeSnippet: <SidebarCode />,
+      example2: '',
+      codeSnippet2: '',
+    id: 9
     });
+    this.pageSwitch();
   }
 
 
