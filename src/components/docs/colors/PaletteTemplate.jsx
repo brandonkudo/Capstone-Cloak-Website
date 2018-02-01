@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function PaletteTemplate(props){
 
@@ -44,6 +45,15 @@ function PaletteTemplate(props){
       </div>
     </div>
   );
+}
+
+PaletteTemplate.propTypes = {
+  paletteName: PropTypes.string,
+  color1: PropTypes.string,
+  color2: PropTypes.string,
+  color3: PropTypes.string,
+  color4: PropTypes.string,
+  color5: PropTypes.string
 }
 
 export default PaletteTemplate;

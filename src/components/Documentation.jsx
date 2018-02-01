@@ -155,7 +155,7 @@ class Documentation extends React.Component {
       codeSnippet: <SidebarCode />,
       example2: '',
       codeSnippet2: '',
-    id: 9
+      id: 9
     });
     this.pageSwitch();
   }

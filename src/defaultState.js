@@ -30,35 +30,35 @@ export const defaultState = {
     },
     {
       title: 'colors',
-      body: `We have a number of different color palettes, in order to use them denote which palette and whether you want to change background color or font, then which color in the palette you'd like to use`,
+      body: 'We have a number of different color palettes, in order to use them denote which palette and whether you want to change background color or font, then which color in the palette you\'d like to use',
       title2: '',
       body2: '',
       id: 5
     },
     {
       title: 'forms',
-      body: `We have a number of different components to customize your forms. These are the default styles for the <input>, <textarea>, <input type="radio">, and <input type="checkbox"> HTML tags.`,
+      body: 'We have a number of different components to customize your forms. These are the default styles for the <input>, <textarea>, <input type="radio">, and <input type="checkbox"> HTML tags.',
       title2: '',
       body2: '',
       id: 6
     },
     {
       title: 'grid',
-      body: `Cloak uses a 12 column grid system based on flexbox.  It is fully responsive and easy to implement. To use place all items you want into a parent element using the class “.row”.  You can then nest as many as 12 columns within each row; use the class “.col-“ then denote how much of the 12 column width you wish for that column to use.  All columns in a row must add up to 12`,
+      body: 'Cloak uses a 12 column grid system based on flexbox.  It is fully responsive and easy to implement. To use place all items you want into a parent element using the class “.row”.  You can then nest as many as 12 columns within each row; use the class “.col-“ then denote how much of the 12 column width you wish for that column to use.  All columns in a row must add up to 12',
       title2: '',
       body2: '',
       id: 7
     },
     {
       title: 'navbar',
-      body: `Fully responsive navbars, use the class ".nav" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"`,
+      body: 'Fully responsive navbars, use the class ".nav" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"',
       title2: 'gradient navbar',
       body2: 'Navbar with a linear gradient, use the class ".nav-gradient" in a parent element, use the class ".nav-logo" to place a logo, and use the class ".nav-link" on any links.  Additionally if you want to group any links together, nest them inside of an element with the tag ".nav-group"',
       id: 8
     },
     {
       title: 'sidebar',
-      body: `A sidebar with clickable links and hover styling.  Can be oriented left or right.  Use efault class ".sidebar-left" to place on left, or ".sidebar-right" to place on the right.`,
+      body: 'A sidebar with clickable links and hover styling.  Can be oriented left or right.  Use efault class ".sidebar-left" to place on left, or ".sidebar-right" to place on the right.',
       title2: '',
       body2: '',
       id: 9

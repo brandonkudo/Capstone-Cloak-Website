@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Item(props){
   const styles = {
@@ -65,5 +66,16 @@ function Item(props){
 
   );
 }
+
+Item.propTypes = {
+  title: PropTypes.string,
+  example: PropTypes.element,
+  body: PropTypes.string,
+  codeSnippet: PropTypes.element,
+  title2: PropTypes.string,
+  example2: PropTypes.element,
+  body2: PropTypes.string,
+  codeSnippet2: PropTypes.element
+};
 
 export default Item;
